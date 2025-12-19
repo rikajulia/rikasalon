@@ -249,3 +249,115 @@ footer {
     font-size: 13px;
   }
 }
+/* =============================== */
+/* ===== MOBILE FULL FLEX FIX ==== */
+/* =============================== */
+@media (max-width: 768px) {
+
+  /* BODY FULL TANPA GAP */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* SECTION FULL */
+  .slider-section {
+    padding: 32px 0 50px; /* HAPUS jarak samping */
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+
+  /* WRAPPER FULL */
+  .slider-wrapper {
+    padding: 20px 16px;
+    border-radius: 0;           /* full edge */
+    margin: 0;
+  }
+
+  /* SLIDER FULL */
+  .slider {
+    gap: 14px;
+    padding: 0;
+  }
+
+  .slide {
+    min-width: 150px;
+  }
+
+  .slide img {
+    height: 110px;
+    border-radius: 14px;
+  }
+
+  /* BUTTON POSISI AMAN */
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .nav-btn.left {
+    left: 6px;
+  }
+
+  .nav-btn.right {
+    right: 6px;
+  }
+
+  /* TEXT BAWAH */
+  .slider-text {
+    padding: 0 16px;
+    margin-top: 28px;
+  }
+
+  .slider-text p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* TABLE DESKRIPSI FULL */
+  .service-detail {
+    margin: 24px 0 0;
+    border-radius: 0;
+    padding: 18px 16px;
+  }
+
+  .service-detail table,
+  .service-detail tbody,
+  .service-detail tr {
+    display: block;
+    width: 100%;
+  }
+
+  .service-detail th,
+  .service-detail td {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .service-detail th {
+    font-size: 12px;
+    color: #cc5490;
+  }
+
+  .service-detail td {
+    font-size: 13px;
+  }
+
+  /* BACKGROUND FULL MOBILE */
+  .slider-section::before {
+    background-attachment: scroll; /* FIX iOS */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 14px 0 18px;
+    font-size: 11px;
+  }
+}

@@ -431,3 +431,19 @@ footer {
   }
 
 }
+/* =============================== */
+/* ===== MOBILE FLEX OVERRIDE ==== */
+/* =============================== */
+@media (max-width: 768px){} 
+
+  /* GLOBAL */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* PAGE FULL WIDTH */
+  .page {
+    padding: 18px 12px 24px;
+  }
+
+  /* WRAPPER JADI STACK
