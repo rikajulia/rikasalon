@@ -1,0 +1,251 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(236,217,221,0.45), transparent 60%),
+    linear-gradient(180deg, #f3f3f5, #f7c2e1, #e9dff2);
+  color: #e2e2e2;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR (JANGAN DIUBAH) ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 7%;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #cc5490;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #8a8888;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ee80a9;
+  transition: .2s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* ===== SECTION ===== */
+.slider-section {
+  padding: 60px 7% 80px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+/* ===== SLIDER BG ===== */
+.slider-wrapper {
+  position: relative;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 30px 60px;
+  box-shadow: 0 20px 50px rgba(40,30,60,0.18);
+}
+/* ===== FOTO BACKGROUND DI BELAKANG SLIDER ===== */
+.slider-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* FOTO BACKGROUND */
+.slider-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),
+    url("img/Warna-Warni\ Retro\ Esteik\ Kolase\ Foto.png"); /* GANTI FOTO BG DI SINI */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+
+/* ===== SLIDER ===== */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  min-width: 200px;
+}
+
+.slide img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(40,30,60,0.25);
+  transition: transform .3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.06);
+}
+
+/* ===== BUTTON ===== */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.nav-btn.left {
+  left: 14px;
+}
+
+.nav-btn.right {
+  right: 14px;
+}
+
+/* ===== TEXT ===== */
+.slider-text {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.slider-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #b6b2b4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 170px;
+  }
+
+  .slide img {
+    height: 120px;
+  }
+
+  .slider-wrapper {
+    padding: 24px;
+  }
+}
+.slider-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),
+    url("img/Warna-Warni\ Retro\ Esteik\ Kolase\ Foto.png");
+  background-size: cover;
+  background-position: center;
+
+  /* TAMBAHKAN BARIS INI */
+  background-attachment: fixed;
+
+  z-index: -1;
+}
+
+/* ===== TABLE DESKRIPSI ===== */
+.service-detail {
+  max-width: 900px;
+  margin: 40px auto 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+}
+
+.service-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.service-detail th {
+  text-align: left;
+  width: 180px;
+  padding: 12px;
+  color: #8a3f63;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.service-detail td {
+  padding: 12px;
+  color: #3a2f52;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .service-detail th {
+    width: 120px;
+    font-size: 13px;
+  }
+}

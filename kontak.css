@@ -1,0 +1,433 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #c0b6bd 0%, #d6d1d5 40%, #c0c0c0 100%);
+  color: #1f2c2b;
+}
+
+/* NAVBAR – selaras dengan halaman lain */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 7%;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.logo span {
+  color: #cc2e97;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #3b4745;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #cc2eaa;
+  transition: width 0.2s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* PAGE */
+.page {
+  padding: 24px 7% 32px;
+}
+
+/* TOP STRIP */
+.top-strip {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #4e615d;
+}
+
+.top-strip span {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(46, 204, 113, 0.06);
+  border: 1px dashed rgba(46, 204, 113, 0.3);
+}
+
+/* WRAPPER UTAMA */
+.wrapper {
+  margin-top: 10px;
+  padding: 22px 22px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* INFO KIRI */
+.info {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.info p {
+  font-size: 13px;
+  max-width: 420px;
+  margin-bottom: 14px;
+  color: #c55cae;
+}
+
+.info-block {
+  margin-bottom: 10px;
+}
+
+.info-block h3 {
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: #1f2c2b;
+}
+
+.info-block p {
+  font-size: 13px;
+}
+
+.info-block .highlight {
+  font-weight: 600;
+  color: #cc2ea4;
+}
+
+.info-block .small {
+  font-size: 11px;
+  color: #70817b;
+}
+
+.bullets {
+  margin-top: 6px;
+  list-style: none;
+  font-size: 12px;
+  color: #4b5a55;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* TAG KEUNGGULAN */
+.info-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eefcf3;
+  border: 1px solid #c7f1d9;
+  color: #c56dab;
+}
+
+/* FOTO + TESTIMONI (1 FOTO BESAR) */
+.info-visual.single {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* FOTO UTAMA DENGAN OVERLAY */
+.photo-main {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.15);
+}
+
+.photo-main img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo-main:hover img {
+  transform: scale(1.05);
+}
+
+.photo-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.7));
+  color: #ffffff;
+  padding: 18px 16px 14px;
+}
+
+.photo-overlay h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.photo-overlay p {
+  font-size: 13px;
+  color: #e2f4eb;
+}
+
+/* QUOTE CARD */
+.quote-card {
+  border-radius: 16px;
+  background: #f3fff8;
+  border: 1px solid #d4f3e2;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.quote-card p {
+  font-size: 12px;
+  color: #4b5a55;
+}
+
+.quote-card span {
+  font-size: 11px;
+  color: #2f6e4c;
+  margin-top: 4px;
+}
+
+/* FORM KANAN */
+.form-kontak {
+  flex: 1 1 360px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 18px 18px;
+  box-shadow: 0 14px 40px rgba(38, 179, 96, 0.18);
+  border: 1px solid #c4f3d6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-kontak h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.form-kontak label {
+  font-size: 12px;
+  color: #43514c;
+}
+
+.form-kontak input,
+.form-kontak select,
+.form-kontak textarea {
+  margin-top: 2px;
+  margin-bottom: 6px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #7a8884;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.form-kontak input::placeholder,
+.form-kontak textarea::placeholder {
+  color: #9ca9a4;
+}
+
+.form-kontak input:focus,
+.form-kontak select:focus,
+.form-kontak textarea:focus {
+  outline: none;
+  border-color: #ad8493;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.25);
+}
+
+.form-kontak button {
+  margin-top: 6px;
+  padding: 9px 0;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #4c4568, #392e53);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(39, 174, 96, 0.45);
+}
+
+.form-kontak button:hover {
+  opacity: 0.97;
+}
+
+.note {
+  font-size: 11px;
+  color: #7a8b84;
+  margin-top: 4px;
+}
+
+/* KARTU INFO BAWAH */
+.info-cards {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 14px 16px 16px;
+  border: 1px solid #d4f4e2;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+.info-card h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #1f2c2b;
+}
+
+.info-card p {
+  font-size: 12px;
+  color: #5a6a64;
+}
+
+/* CTA WHATSAPP */
+.whatsapp-cta {
+  margin-top: 22px;
+}
+
+.wa-card {
+  border-radius: 20px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #473f5c, #514658);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(202, 134, 185, 0.6);
+}
+
+.wa-text h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.wa-text p {
+  font-size: 13px;
+  max-width: 420px;
+}
+
+.wa-button {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  color: #cc2ea4;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wa-button:hover {
+  background: #f6fff9;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 16px 0 20px;
+  font-size: 12px;
+  color: #6a7b74;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 6% 28px;
+  }
+
+  .wrapper {
+    padding: 18px 16px 20px;
+  }
+
+  .form-kontak {
+    padding: 16px 14px 16px;
+  }
+
+  .info-visual.single {
+    margin-top: 14px;
+  }
+
+  .photo-main img {
+    height: 190px;
+  }
+
+  .wa-card {
+    align-items: flex-start;
+  }
+
+  .show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .card,
+  .service-card,
+  .info-card,
+  .wa-card,
+  .quote-card,
+  .gallery figure,
+  .info,
+  .intro {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .5s ease;
+  }
+
+}
