@@ -361,3 +361,148 @@ footer {
     font-size: 11px;
   }
 }
+/* =============================== */
+/* ===== MOBILE FIX TOTAL ======= */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    padding: 12px 5%;
+  }
+
+  .navbar ul {
+    gap: 14px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 5% 30px;
+    gap: 24px;
+  }
+
+  .hero-text {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .hero .desc {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .badges {
+    justify-content: center;
+  }
+
+  /* ===== HERO IMAGE ===== */
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 280px;
+  }
+
+  /* ===== FLOATING CARD ===== */
+  .floating-card {
+    position: static;
+    margin-top: 12px;
+    width: fit-content;
+    align-self: center;
+  }
+
+  /* ===== FEATURES ===== */
+  .features {
+    padding: 20px 5% 30px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 18px;
+  }
+
+  /* ===== HIGHLIGHT ===== */
+  .highlight {
+    padding: 0 5% 30px;
+  }
+
+  .highlight-card {
+    padding: 20px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 14px 0 16px;
+  }
+}
+
+/* =============================== */
+/* ===== EXTRA SMALL HP ======== */
+/* =============================== */
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 23px;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 260px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+/* ================================= */
+/* ===== FINAL MOBILE VISUAL FIX ==== */
+/* ================================= */
+@media (max-width: 768px) {
+
+  /* pastikan semua konten di atas background */
+  .slider-section,
+  .slider-wrapper,
+  .service-detail,
+  .slider-text,
+  footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* background mobile boleh zoom, tapi tidak ganggu konten */
+  .slider-section::before {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* kasih jarak aman antara slider & tabel */
+  .slider-wrapper {
+    margin-bottom: 28px; /* INI K*/
+  }
+}
